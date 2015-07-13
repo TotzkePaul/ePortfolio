@@ -1,0 +1,162 @@
+﻿.terminal {
+    width: 100%;
+    color: #0F0;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.terminal-response {
+    min-height: 300px;
+}
+
+
+.terminal-input {
+    display: table;
+    width: 100%;
+}
+
+.terminal-cursor {
+    display:table-cell;
+    width: 1px;
+}
+
+.terminal-text {
+    display:table-cell;
+    width:100%;
+}
+
+
+.terminal-display {
+    background: #000;
+    padding: 10px 15px;
+}
+
+.terminal-block ul {
+    list-style-type: none;
+}
+
+.terminal-cursor {
+    color: white;
+}
+.terminal-text, .terminal-text:focus {
+    background : none;
+	border : none;
+    outline: none;
+}
+
+/** Toolbar */
+.terminal-toolbar {
+    overflow: hidden;
+    background: #CFCFCF; /* Fallback */
+    background: -moz-linear-gradient(top, #cfcfcf 0%, #a8a8a8 100%); /* Firefox */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cfcfcf), to(#a8a8a8)); /* Safari + Chrome */
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    position: relative;
+    overflow: hidden;
+    font: 14px/26px 'lucinda grande', Helvetica, Arial;
+    text-align: center;
+    padding: 1px 0 0 68px;
+}
+.terminal-toolbar, .terminal-toolbar * {
+    color: #111;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+
+/** Toolbar buttons */
+
+.terminal-toolbar .nav {
+	position: absolute;
+	top: 6px;
+	left: 12px;
+}
+.terminal-toolbar .nav a {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	float: left;
+	width: 14px;
+	margin-right: 7px;
+	font: bold 14px/14px 'Helvetica', 'Arial';
+	text-align: center;
+	color: #FFF;
+
+	-moz-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3) inset, 0 1px 3px 0 rgba(0, 0, 0, 0.80) inset, 0 1px 0px 0 rgba(255, 255, 255, 0.40); /* Firefox */
+-webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3) inset, 0 1px 3px 0 rgba(0, 0, 0, 0.80) inset, 0 1px 0px 0 rgba(255, 255, 255, 0.40); /* Safari + Chrome */
+box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3) inset, 0 1px 3px 0 rgba(0, 0, 0, 0.80) inset, 0 1px 0px 0 rgba(255, 255, 255, 0.40);
+
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+border-radius: 7px;
+
+}
+.terminal-toolbar .nav a.close {
+    background: #f12519;
+    background: -moz-linear-gradient(top, #f12519 0%, #ff8684 100%); /* Firefox */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f12519), to(#ff8684)); /* Safari + Chrome */
+
+    color: #630f0a;
+}
+.terminal-toolbar .nav a.minimize {
+    background: #da8e28;
+    background: -moz-linear-gradient(top, #e59130 0%, #ffdf4b 100%); /* Firefox */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e59130), to(#ffdf4b)); /* Safari + Chrome */
+    color: #742a08;
+}
+.terminal-toolbar .nav a.expand {
+    background: #67982f;
+    background: -moz-linear-gradient(top, #70a847 0%, #a1e268 100%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#70a847), to(#a1e268)); /* Safari + Chrome */
+    color: #093b00;
+}
+
+/** Terminal Display */
+.terminal-display {
+    background: #000;
+}
+
+/** Toolbar Lightning */
+.terminal .nav a:before {
+    content: '';
+    width: 6px;
+    height: 3px;
+    background: -moz-radial-gradient(50% 50% 90deg,ellipse contain, rgba(255,255,255,1), rgba(255,255,255,0) 100%); /* Firefox */
+    position: absolute;
+    left: 50%;
+    top: 1px;
+    margin-left: -3px;
+}
+
+.terminal .nav a:after {
+    content: '';
+    line-height: 2px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    bottom: -4px;
+    opacity:0.55;
+    background: -moz-radial-gradient(50% 50% 90deg,ellipse contain, rgba(255,255,255,1), rgba(255,255,255,0) 100%); /* Firefox */
+}
+
+/** Toolbar Interactivity */
+.terminal .nav:hover a.close:after {
+    content: 'x';
+}
+.terminal .nav:hover a.minimize:after {
+    content: '-';
+}
+.terminal .nav:hover a.expand:after {
+    content: '+';
+}
+
+.terminal a.close:active {
+    background: #c84840;
+}
+.terminal a.minimize:active {
+    background: #bb7e39;
+}
+.terminal a.expand:active {
+    background: #5b9d2a;
+}

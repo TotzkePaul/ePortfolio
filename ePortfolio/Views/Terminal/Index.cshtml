@@ -1,0 +1,44 @@
+﻿@Styles.Render("~/Content/terminal")
+
+@section JavaScript
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Terminal/terminal.js")"></script>
+}
+
+@section CSS
+{
+    <link href="@Url.Content("~/Content/Terminal/terminal.css")" rel="stylesheet" type="text/css" />
+}
+<div class="terminal">
+    <div class="terminal-toolbar">
+        <div class="nav">
+            <a class="close" href="#">&nbsp;</a>
+            <a class="minimize" href="#">&nbsp;</a>
+            <a class="expand" href="#">&nbsp;</a>
+        </div>
+        <div class="terminal-title">Title</div>
+    </div>
+    <div class="terminal-display">
+        <div class="terminal-block">
+            <div class="terminal-command">
+                CMD> ls
+            </div>
+            <div class="terminal-response">
+                <ul>
+                    <li>
+                        doc.txt
+                    </li>
+                </ul>
+
+            </div>
+            <div class="terminal-input">
+                <span class="terminal-cursor">&gt;_</span> <input class="terminal-text" type="text" name="lname">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="terminal-cmd">
+
+    </div>
+</div>
