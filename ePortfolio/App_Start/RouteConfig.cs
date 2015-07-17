@@ -13,6 +13,11 @@ namespace ePortfolio
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("Download",
+                            "Download/{id}",
+                            new { controller = "Download", action = "Index", id = UrlParameter.Optional }
+);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

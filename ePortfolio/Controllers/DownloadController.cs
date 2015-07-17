@@ -11,7 +11,15 @@ namespace ePortfolio.Controllers
         // GET: Download
         public ActionResult Index(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return Content("null");
+            }
+            else
+            {
+                return Content(id.ToString());
+            }
+            
         }
     }
 }
